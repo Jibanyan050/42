@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+
+<body class="randomBackground" id="randomBackground">
+    <script>
+        
+        function changeBackground() {
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+
+            document.body.style.background = "rgb(" + red + ", " + green + ", " + blue + ")";
+        }
+    </script>
+    <button onclick="changeBackground()">Click me</button>
+</body>
+
+</html>

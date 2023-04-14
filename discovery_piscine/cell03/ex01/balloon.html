@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .dot {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let colorIndex = 0;
+        function inflate() {
+            const colors = ['red', 'green', 'blue']
+            var widthElem = document.getElementById('balloon').offsetWidth;
+            document.getElementById('balloon').style.width = widthElem + 10 + 'px';
+            var heightElem = document.getElementById('balloon').offsetHeight;
+            document.getElementById('balloon').style.height = heightElem + 10 + 'px';
+            if (widthElem >= 420) {
+                document.getElementById('balloon').style.width = 200 + 'px';
+            }
+            if (heightElem >= 420) {
+                document.getElementById('balloon').style.height = 200 + 'px';
+            }
+            colorIndex = (colorIndex + 1) % 3;
+            console.log(colors[colorIndex])
+            document.getElementById("balloon").style.backgroundColor = colors[colorIndex]
+        }
+
+        function deflate() {
+            const colors = ['red', "green", "blue"]
+            var widthElem = document.getElementById('balloon').offsetWidth;
+            document.getElementById('balloon').style.width = widthElem - 5 + 'px';
+            var heightElem = document.getElementById('balloon').offsetHeight;
+            document.getElementById('balloon').style.height = heightElem - 5 + 'px';
+            if (widthElem <= 200) {
+                document.getElementById('balloon').style.width = 200 + 'px';
+            }
+            if (heightElem <= 200) {
+                document.getElementById('balloon').style.height = 200 + 'px';
+            }
+            colorIndex = (((colorIndex - 1) % 3) + 3)% 3;
+            console.log(colors[colorIndex])
+            document.getElementById("balloon").style.backgroundColor = colors[colorIndex]
+        }
+    </script>
+
+
+    <div>
+        <span class="dot" ; id="balloon" ; onclick="inflate()" ; onmouseout="deflate()"></span>
+    </div>
+
+</body>
+
+</html>

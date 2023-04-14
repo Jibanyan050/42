@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+    <script type="text/javascript">
+        function calculate() {
+            // get input values
+            var leftInput = document.getElementById("leftInput").value;
+            var operator = document.getElementById("operator").value;
+            var rightInput = document.getElementById("rightInput").value;
+
+            // validate inputs
+            if (leftInput < 0) {
+                alert("Error :(");
+                return;
+            }
+            leftInput = parseInt(leftInput);
+            rightInput = parseInt(rightInput);
+
+            if ((operator === "/" || operator === "%") && rightInput === 0) {
+                alert("It's over 9000!");
+                return;
+            }
+
+            // perform calculation
+            var result;
+            switch(operator) {
+                case "+":
+                    result = leftInput + rightInput;
+                    break;
+                case "-":
+                    result = leftInput - rightInput;
+                    break;
+                case "*":
+                    result = leftInput * rightInput;
+                    break;
+                case "/":
+                    result = leftInput / rightInput;
+                    break;
+                case "%":
+                    result = leftInput % rightInput;
+                    break;
+            }
+
+            // display result
+            alert(result);
+
+            // log result
+            console.log(result);
+        }
+
+        // set up interval for reminder
+        setInterval(function() {
+            alert("Please, use me...");
+        }, 30000);
+    </script>
+</head>
+<body>
+    <div>
+        <label for="leftInput">Left Input:</label>
+        <input type="text" id="leftInput" name="leftInput" />
+    </div>
+    <div>
+        <label for="operator">Operator:</label>
+        <select id="operator" name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+    </div>
+    <div>
+        <label for="rightInput">Right Input:</label>
+        <input type="text" id="rightInput" name="rightInput" />
+    </div>
+    <div>
+        <input type="button" id="calculateButton" value="Try me!" onclick="calculate();" />
+    </div>
+</body>
+</html>

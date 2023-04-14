@@ -1,0 +1,53 @@
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .parallax-1 {
+            width: 100%;
+            height: 1000px;
+            background: url('https://cdn.britannica.com/96/176196-050-EFC5E6A6/Glock-pistol.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .parallax-2 {
+            width: 100%;
+            height: 1000px;
+            background: url('https://cdn.staticneo.com/n/6/header_54.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+         .parallax-2 h2 {
+            margin: auto;
+            position: relative;
+            left: 500x;
+            top: 300px;
+            width: 250px;
+            height: 37px;
+            padding: 10px;
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            font-family: Verdana;
+        }
+   
+        .parallax-1 h2 {
+            margin: auto;
+            position: relative;
+            left: 500x;
+            top: 300px;
+            width: 250px;
+            height: 32px;
+            padding: 10px;
+            color: black;
+            text-align: center;
+        }
+   
+         .paragraph-1 {
+            padding: 50px;
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
