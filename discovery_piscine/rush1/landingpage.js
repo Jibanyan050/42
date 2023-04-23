@@ -13,8 +13,5 @@ function changeBackground() {
 
 setInterval(changeBackground, 5000);
 
-function transport() {
-  alert("TEST");
 
-}
 
